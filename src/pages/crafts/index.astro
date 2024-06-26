@@ -1,7 +1,15 @@
 ---
-import Footer from "@/components/widgets/Footer.astro";
 import Navigation from "@/components/widgets/Navigation.astro";
-import Social from "@/components/widgets/Socia.astro";
+import Footer from "@/components/widgets/Footer.astro";
+
+const pageTitle = "Crafts";
+
+const myself = {
+  firstName: "David",
+  lastName: "Kim",
+  country: "USA",
+  occupation: "Web developer",
+};
 ---
 
 <html lang="en">
@@ -10,15 +18,12 @@ import Social from "@/components/widgets/Socia.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Holahoon</title>
+    <title>Holahoon - {pageTitle}</title>
   </head>
+
   <body>
     <Navigation />
-
-    <h1>Main page</h1>
-
-    <Social platform="LinkedIn" url="https://www.linkedin.com/in/holahoon/" />
-    <Social platform="Github" url="https://github.com/holahoon" />
+    <h1>About</h1>
     <Footer />
   </body>
 </html>

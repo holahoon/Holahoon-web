@@ -3,7 +3,18 @@
 Hey👋, I'm David Kim, a web developer.
 This is my personal website made with [Astro](https://astro.build/).
 
-# Astro Starter Kit: Minimal
+This project uses node v20.12.2.
+
+## 🛠️ Tools
+
+- [Tailwind CSS](https://tailwindcss.com/docs/guides/astro)
+
+## Get started
+
+Uses [http://localshot:4321](http://localshot:4321).
+```sh
+pnpm dev
+```
 
 ```sh
 npm create astro@latest -- --template minimal
