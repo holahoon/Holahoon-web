@@ -1,24 +1,18 @@
 ---
-import Footer from "@/components/widgets/Footer.astro";
-import Navigation from "@/components/widgets/Navigation.astro";
-import Social from "@/components/widgets/Socia.astro";
+import MainLayout from "@/components/layouts/MainLayout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Holahoon</title>
-  </head>
-  <body>
-    <Navigation />
-
-    <h1>Main page</h1>
-
-    <Social platform="LinkedIn" url="https://www.linkedin.com/in/holahoon/" />
-    <Social platform="Github" url="https://github.com/holahoon" />
-    <Footer />
-  </body>
-</html>
+<MainLayout title="DK">
+  <hgroup>
+    <h2 class="text-xl">Hey there 👋,</h2>
+    <h1 class="text-2xl">I'm David Kim</h1>
+  </hgroup>
+  <p>
+    I'm a fullstack developer with love and passion for crafting beautiful UIs
+    on the web.
+  </p>
+  <p>
+    I enjoy solving real world problems that brings value to the world ... blah
+    blah blah
+  </p>
+</MainLayout>
