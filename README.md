@@ -5,6 +5,14 @@ This is my personal website made with [Astro](https://astro.build/).
 
 This project runs on node v20.12.2.
 
+## 📝 Todos
+
+- [ ] Create main page
+- [ ] Create About page
+- [ ] Create crafts page
+- [ ] Implement i18n (eng/kor)
+- [ ] Implement light/dark theme mode
+
 ## 🛠️ Tools
 
 - [Tailwind CSS](https://tailwindcss.com/docs/guides/astro)
