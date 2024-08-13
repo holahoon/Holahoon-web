@@ -3,11 +3,14 @@
 Hey👋, I'm David Kim, a web developer.
 This is my personal website made with [Astro](https://astro.build/).
 
-This project uses node v20.12.2.
+This project runs on node v20.12.2.
 
 ## 🛠️ Tools
 
 - [Tailwind CSS](https://tailwindcss.com/docs/guides/astro)
+- [prettier](https://prettier.io/)
+  - [prettier-plugin-astro](https://github.com/withastro/prettier-plugin-astro)
+
 
 ## Get started
 

@@ -1,37 +1,37 @@
 ---
-import Navigation from "../widgets/Navigation.astro";
-import Footer from "../widgets/Footer.astro";
+import Navigation from '../widgets/Navigation.astro'
+import Footer from '../widgets/Footer.astro'
 
 interface Props {
-  title: string;
-  description?: string;
-  image?: string;
+   title: string
+   description?: string
+   image?: string
 }
 
 const {
-  title,
-  description = "Hey, I'm David Kim, a fullstack developer.",
-  image = "",
-} = Astro.props;
+   title,
+   description = "Hey, I'm David Kim, a fullstack developer.",
+   image = ''
+} = Astro.props
 ---
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={description} />
-    <meta name="og:image" content={image} />
-    <!-- TODO: Astro SEO -->
-    <title>Holahoon | {title}</title>
-  </head>
+   <head>
+      <meta charset="utf-8" />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <meta name="viewport" content="width=device-width" />
+      <meta name="generator" content={Astro.generator} />
+      <meta name="description" content={description} />
+      <meta name="og:image" content={image} />
+      <!-- TODO: Astro SEO -->
+      <title>Holahoon | {title}</title>
+   </head>
 
-  <body class="container min-h-screen flex flex-col h-[500vh]">
-    <Navigation />
-    <main class="flex-1 mt-14">
-      <slot />
-    </main>
-    <Footer />
-  </body>
+   <body class="container min-h-screen flex flex-col h-[500vh]">
+      <Navigation />
+      <main class="flex-1 mt-14">
+         <slot />
+      </main>
+      <Footer />
+   </body>
 </html>
