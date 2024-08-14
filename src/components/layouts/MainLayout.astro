@@ -17,6 +17,18 @@ const {
 
 <html lang="en">
    <head>
+      <script is:inline>
+         const systemTheme = window.matchMedia('(prefers-color-scheme: dark)')
+
+         // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+         if (
+            (localStorage.theme && localStorage.theme === 'dark') ||
+            systemTheme.matches
+         )
+            document.documentElement.classList.add('dark')
+         else document.documentElement.classList.remove('dark')
+      </script>
+
       <meta charset="utf-8" />
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       <meta name="viewport" content="width=device-width" />
@@ -24,7 +36,9 @@ const {
       <meta name="description" content={description} />
       <meta name="og:image" content={image} />
       <!-- TODO: Astro SEO -->
-      <title>Holahoon | {title}</title>
+      <title>
+         Holahoon | {title}
+      </title>
    </head>
 
    <body class="container min-h-screen flex flex-col h-[500vh]">

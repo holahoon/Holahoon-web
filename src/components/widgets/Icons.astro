@@ -1,0 +1,24 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+import type {IconNode} from 'lucide'
+
+interface Props extends HTMLAttributes<'svg'> {
+  icon: IconNode
+}
+
+const {icon, ...props} = Astro.props
+const [, attrs, children] = icon
+
+const componentChildren = children
+  ?.map(
+    ([shape, attributes]) =>
+      `<${shape} ${Object.entries(attributes)
+        .map(([k, v]) => `${k}="${v}"`)
+        .join(" ")} />`
+  )
+  .join("");
+
+const componentAttributes = {...attrs, ...props}
+---
+
+<svg {...componentAttributes} set:html={componentChildren} />
