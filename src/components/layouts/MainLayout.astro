@@ -1,6 +1,7 @@
 ---
 import Navigation from '../widgets/Navigation.astro'
 import Footer from '../widgets/Footer.astro'
+import '../../styles/global.css'
 
 interface Props {
    title: string
@@ -10,7 +11,7 @@ interface Props {
 
 const {
    title,
-   description = "Hey, I'm David Kim, a fullstack developer.",
+   description = "Hey, I'm David Kim, a software engineer.",
    image = ''
 } = Astro.props
 ---
@@ -41,7 +42,7 @@ const {
       </title>
    </head>
 
-   <body class="container min-h-screen flex flex-col h-[500vh]">
+   <body class="container min-h-screen flex flex-col bg-primary text-foreground">
       <Navigation />
       <main class="flex-1 mt-14">
          <slot />
